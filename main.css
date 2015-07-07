@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  background-color: #001600;
+}
+body {
+  color: #FF3300;
+  text-align: center;
+}
+
+#input {
+	width: 100px;
+	height: 30px;
+	margin: 10px auto;
+	display: block;
+}
+
+.border {
+  width: 300px;
+  padding: 25px;
+  border: 5px solid white;
+  margin: auto;
+}
+
+h2 {
+  font-size:small;
+}
