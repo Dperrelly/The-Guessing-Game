@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guessing Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png"     href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Arabic_Question_mark_%28RTL%29.svg/250px-Arabic_Question_mark_%28RTL%29.svg.png">
   </head>
   <body>
     <h1 id="gameTitle">The Guessing Game!</h1>
       <div class='border'>
-      <input type="text" id="input" placeholder="1-100" class='form-control input'>
-        <h2 id="message"'>Go ahead! Try to guess the number between 1 and 100</h2>
+        <p id="message">Go ahead! Try to guess the number between 1 and 100</p>
+        <input type="text" id="input" placeholder="1-100" class='form-control input' onkeydown="if (event.keyCode === 13) guess()">
+        <p id="guessesRemaining">Guesses remaining: <span id="guesses">5</span></p>
         <div class='btn-group'>
-         <button type="button" id="guessButton" class="btn btn-primary">Guess</button>
-         <button type="button" id="hintButton" class="btn btn-success">Hint</button>
-         <button type="button" id="resetButton" class="btn btn-danger">Reset</button>  
+         <button type="button" id="guessButton" class="btn btn-primary" onclick="guess()">Guess</button>
+         <button type="button" id="hintButton" class="btn btn-success" onclick="hint()">Hint</button>
+         <button type="button" id="resetButton" class="btn btn-danger" onclick="reset()">Reset</button>  
         </div>
+        <p id="guessHistory" class="guess" hidden>Guessing History</p>
+        <p id="guess1" class="guess" hidden>1</p>
+        <p id="guess2" class="guess" hidden>2</p>
+        <p id="guess3" class="guess" hidden>3</p>
+        <p id="guess4" class="guess" hidden>4</p>
+        <p id="guess5" class="guess" hidden>5</p>
       </div>
+    <img src="https://cdn3.iconfinder.com/data/icons/musthave/256/Positive.png" id="smiley" hidden>
+	  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="js/app.js"></script>
   </body>
 </html>
